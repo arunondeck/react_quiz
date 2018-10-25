@@ -2,19 +2,22 @@ import initialState from '../stores/initialState';
 import actionTypes from '../actions/actionTypes';
 
 const ffReducer = (state = initialState, action) => {
+    console.log(action);
     switch(action.type){
         case actionTypes.RESET_APP:
             let armies = [];
             for(let i = 0; i< state.armyCount; i++)
                 armies.push(state.armyTemplate);
             return Object.assign({}, state, {
-                armies: armies, initialized: true, 
+                armies: armies, 
+                initialized: true, 
                 availablePlanets: state.planets.map((planet) => planet.name),
                 availableVehicles: state.vehicles, 
-                updateSearchTime: true,
+                searchTime: 0,
+                updateSearchTime: false,
                 armyReady: false,
                 armyResult: {},
-                armySent: false
+                armySent: false 
             });
 
         case actionTypes.INIT_APP:
@@ -69,7 +72,9 @@ const ffReducer = (state = initialState, action) => {
             return Object.assign({}, state, {armySent: true});
 
         case actionTypes.RECEIVE_SENDARMY:
-            return Object.assign({}, state, {armyResult: action.data});
+            let armyResult = Object.assign({}, action.data);
+            armyResult.status = armyResult.status === 'false' ? false : true;
+            return Object.assign({}, state, {armyResult: armyResult});
         default:
             return state;
     }

@@ -5,7 +5,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Used Libraries
 --------------
 react-bootstrap
+
 react-spinners
+
+
+Commands
+--------------
 
 To deploy run,
 npm start

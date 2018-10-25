@@ -9,7 +9,7 @@ class FFSendArmyControl extends React.Component{
     }
     render(){
         return(
-            <Col xs={8}>
+            <Col xs={12} md={4} mdOffset={4}>
                 <Button disabled={!this.props.armyReady} onClick={this.props.armyReady ? this.handleSendArmyBtnClick : null} bsStyle="primary" bsSize="large" block>
                     Send Army
                 </Button>
