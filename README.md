@@ -4,9 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Used Libraries
 --------------
-react-bootstrap
+[react-bootstrap](https://github.com/react-bootstrap/react-bootstrap)
 
-react-spinners
+[react-spinners](https://github.com/davidhu2000/react-spinners)
 
 
 Commands
