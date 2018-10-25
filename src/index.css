@@ -8,7 +8,54 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.app-root *, .sidebar *{
+  border-radius:0;
+}
+
+.eta-block {
+  padding: 2px;
+  background-color: #00BF96;
+  color: #fff;
+  border: 1px solid;
+}
+
+.eta-block div{
+  padding: 0;
+}
+
+.eta-block div:nth-child(2){
+  background: #fff;
+  color: #000;
+}
+
+.main .row, .sidebar .row{
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.reset-link{
+  cursor: pointer;
+  font-size: 14px;
+}
+
+ul.sidebar-list.list-group .list-group-item {
+  padding: 5px 10px;
+}
+
+ul.sidebar-list.list-group .list-group-item:hover{
+  background-color: #fcfcfc;
+}
+
+ul.sidebar-list.list-group .list-group-item:hover div[class*='info'] {
+  display: block;
+}
+
+ul.sidebar-list.list-group .list-group-item div[class*='info'] {
+  transition: all ease-in 1s;
+  display: none;
+  padding: 5px 10px;
+}
+
+.loading.sweet-loading{
+  text-align: center;
 }
